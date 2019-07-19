@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="Default.aspx" title="Inicio"  description="Inicio">
+    <siteMapNode url="" title="Seguridad" description="Seguridad">
+      <siteMapNode url="" title="Usuarios" description="Usuarios">
+      <siteMapNode url="CrearUsuario.aspx" title="Crear Usuario" description="Crear Usuario"/>
+        <!--<siteMapNode url="Rol.aspx" title="Roles" description="Roles"/>
+      <siteMapNode url="CambiarContra.aspx" title="Cambiar Contraseña" description="Cambiar Contraseña"/>-->
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="" title="Administración" description="Administración">
+      <!--<siteMapNode url="RamasCientificas.aspx" title="Ramas Cientificas" description="Ramas Cientificas"/>
+      <siteMapNode url="Proyectos.aspx" title="Proyectos" description="Proyectos"/>-->
+      <siteMapNode url="BitacoraExperimental.aspx" title="Bitacora Experimental" description="Bitacora Experimental"/>
+      
+    </siteMapNode>
+    <siteMapNode url="" title="Consultas" description="Consultas">
+      <siteMapNode url="Bitacora.aspx" title="Bitacora" description="Bitacora"/>
+      <siteMapNode url="Errores.aspx" title="Errores" description="Errores"/>
+      <siteMapNode url="Descargas.aspx" title="Descargas" description="Descargas"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
+    
+    
+ 
+   
+  
+    
+    
