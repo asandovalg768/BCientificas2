@@ -72,6 +72,7 @@
     <Content Include="CrearUsuario.aspx" />
     <Content Include="Errores.aspx" />
     <Content Include="Descargas.aspx" />
+    <Content Include="ConsecutivoEditar.aspx" />
     <Content Include="RolesEditar.aspx" />
     <Content Include="Roles.aspx" />
     <Content Include="RamasCientifica.aspx" />
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="Descargas.aspx.designer.cs">
       <DependentUpon>Descargas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsecutivoEditar.aspx.cs">
+      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsecutivoEditar.aspx.designer.cs">
+      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
     </Compile>
     <Compile Include="RolesEditar.aspx.cs">
       <DependentUpon>RolesEditar.aspx</DependentUpon>
