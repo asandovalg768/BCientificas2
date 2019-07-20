@@ -7,19 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace BCientificas
 {
-    public partial class Formulario_web111 : System.Web.UI.Page
+    public partial class Formulario_web113 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void ddlDescripcion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
         {
 
         }

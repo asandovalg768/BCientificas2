@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +74,10 @@
     <Content Include="Errores.aspx" />
     <Content Include="Descargas.aspx" />
     <Content Include="ConsecutivoEditar.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Consecutivos.aspx" />
+    <Content Include="VerUsuarios.aspx" />
+    <Content Include="Puestos.aspx" />
     <Content Include="RolesEditar.aspx" />
     <Content Include="Roles.aspx" />
     <Content Include="RamasCientifica.aspx" />
@@ -125,6 +130,34 @@
     </Compile>
     <Compile Include="ConsecutivoEditar.aspx.designer.cs">
       <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consecutivos.aspx.cs">
+      <DependentUpon>Consecutivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consecutivos.aspx.designer.cs">
+      <DependentUpon>Consecutivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerUsuarios.aspx.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerUsuarios.aspx.designer.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Puestos.aspx.cs">
+      <DependentUpon>Puestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Puestos.aspx.designer.cs">
+      <DependentUpon>Puestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="RolesEditar.aspx.cs">
       <DependentUpon>RolesEditar.aspx</DependentUpon>
@@ -217,7 +250,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51179</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44372/</IISUrl>
+          <IISUrl>https://localhost:44308/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -5,13 +5,17 @@
     <siteMapNode url="" title="Seguridad" description="Seguridad">
       <siteMapNode url="" title="Usuarios" description="Usuarios">
       <siteMapNode url="CrearUsuario.aspx" title="Crear Usuario" description="Crear Usuario"/>
-        <!--<siteMapNode url="Rol.aspx" title="Roles" description="Roles"/>
-      <siteMapNode url="CambiarContra.aspx" title="Cambiar Contraseña" description="Cambiar Contraseña"/>-->
+        <siteMapNode url="Roles.aspx" title="Roles" description="Roles"/>
+      
       </siteMapNode>
+       <siteMapNode url="TiposConsecutivos.aspx" title="TiposConsecutivos" description="TiposConsecutivos"/>
+       <siteMapNode url="Consecutivos.aspx" title="Consecutivos" description="Consecutivos"/>
+       <siteMapNode url="NivelAcademico.aspx" title="NivelAcademico" description="NivelAcademico"/>
+    
     </siteMapNode>
     <siteMapNode url="" title="Administración" description="Administración">
-      <!--<siteMapNode url="RamasCientificas.aspx" title="Ramas Cientificas" description="Ramas Cientificas"/>
-      <siteMapNode url="Proyectos.aspx" title="Proyectos" description="Proyectos"/>-->
+     <siteMapNode url="RamasCientificas.aspx" title="Ramas Cientificas" description="Ramas Cientificas"/>
+      <siteMapNode url="Proyectos.aspx" title="Proyectos" description="Proyectos"/>
       <siteMapNode url="BitacoraExperimental.aspx" title="Bitacora Experimental" description="Bitacora Experimental"/>
       
     </siteMapNode>
