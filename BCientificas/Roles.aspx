@@ -17,22 +17,22 @@
             <h3>Roles</h3>
             <div>
                 Code :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txtCodigo" runat="server" ReadOnly="True">Code</asp:TextBox>
+                <asp:TextBox ID="txtCodigo" runat="server" ReadOnly="True"></asp:TextBox>
                 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:ListBox ID="lstbRoles" runat="server" Height="48px" Width="169px"></asp:ListBox>
             </div>
             <div>
                 Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txtNombreRol" runat="server">Name</asp:TextBox>
+                <asp:TextBox ID="txtNombreRol" runat="server"></asp:TextBox>
             </div>
             <div>
                 Description:
-                <asp:TextBox ID="txtDescripcion" runat="server">Description</asp:TextBox>
+                <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
                 <br />
             </div>
             <div class="auto-style2">
-                <asp:Button ID="btnGuardar" runat="server" Text="Save" Width="91px" />
+                <asp:Button ID="btnGuardar" class="w3-button w3-green" runat="server" Text="Save" Width="91px" />
             </div>
 
 

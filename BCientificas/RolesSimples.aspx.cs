@@ -13,5 +13,15 @@ namespace BCientificas
         {
 
         }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

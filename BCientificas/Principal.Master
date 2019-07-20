@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -19,7 +20,7 @@
             <table id="encabezado" border="0" >
     <tr>
     <td>
-    <a><img src="Imagenes/header.png" alt="Emily's Flowers" style="border: 0px;" /></a>
+    <a><img src="Imagenes/header.png" alt="BCientificas Project" style="border: 0px;" /></a>
     </td>
     </tr>
     </table>
@@ -42,7 +43,7 @@
         <td class="auto-style1">
             User:<asp:LoginName ID="LoginName1" runat="server" />
             <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx"
-                LogoutText="Cerrar Sesion" OnLoggingOut="LoginStatus1_LoggingOut" />
+                LogoutText="Close Sesion" OnLoggingOut="LoginStatus1_LoggingOut" />
         </td>
     </tr>
     </table>

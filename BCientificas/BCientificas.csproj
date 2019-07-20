@@ -89,7 +89,7 @@
     <Content Include="ProyectoActualizado.aspx" />
     <Content Include="Proyecto.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="TipoConsecutivo.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitacoraExperimental.aspx.cs">
@@ -240,12 +240,12 @@
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="TipoConsecutivo.aspx.cs">
+      <DependentUpon>TipoConsecutivo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="TipoConsecutivo.aspx.designer.cs">
+      <DependentUpon>TipoConsecutivo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

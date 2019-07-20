@@ -3,7 +3,7 @@
     <style type="text/css">
         .auto-style2 {
             width: 461px;
-            height: 274px;
+            height: 365px;
         }
         </style>
 </asp:Content>
@@ -27,11 +27,11 @@
                 <br />
                 <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnGuardar" runat="server" Text="Save" />
+                <asp:Button ID="btnGuardar" runat="server" class="w3-button w3-green" Text="Save" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEliminar" runat="server" Text="Delete" />
+                <asp:Button ID="btnEliminar" runat="server" class="w3-button w3-green" Text="Delete" />
             &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEliminar0" runat="server" Text="Update" />
+                <asp:Button ID="btnEliminar0" runat="server" class="w3-button w3-green" Text="Update" />
           
 
 

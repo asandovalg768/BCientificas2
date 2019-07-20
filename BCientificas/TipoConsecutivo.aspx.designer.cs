@@ -10,6 +10,6 @@
 namespace BCientificas {
     
     
-    public partial class WebForm1 {
+    public partial class Formulario_web1 {
     }
 }

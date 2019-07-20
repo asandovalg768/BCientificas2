@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style2 {
-            width: 541px;
-            height: 413px;
+            width: 596px;
+            height: 652px;
         }
     </style>
 </asp:Content>
@@ -20,7 +20,7 @@
         
         <asp:TextBox ID="txtCodigo" runat="server" ReadOnly="True"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="imgFoto" runat="server" />
+            <asp:ImageButton ID="imgFoto" runat="server" />
         <br />
         <br />
         <br />
@@ -31,15 +31,15 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
             <br />
 &nbsp;&nbsp; Second Last Name:
-        <asp:TextBox ID="txt2Apellido" runat="server" OnTextChanged="txt2Apellido_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="txt2Apellido" runat="server" OnTextChanged="txt2Apellido_TextChanged" Width="123px"></asp:TextBox>
         &nbsp;&nbsp;&nbsp; Role Type:&nbsp;
-        <asp:TextBox ID="txtTipoRol" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtTipoRol" runat="server" Width="103px"></asp:TextBox>
         &nbsp;&nbsp;<br />
             <br />
 &nbsp;&nbsp; Phone:&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtTel0" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtTel0" runat="server" TextMode="Number"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;Position:&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPuesto" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPuesto" runat="server" Width="119px"></asp:TextBox>
             <br />
         <br />
         &nbsp;&nbsp; Nickname:
@@ -49,9 +49,9 @@
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;Password:&nbsp;&nbsp;
-        <asp:TextBox ID="txtContra" runat="server" OnTextChanged="txtNickName0_TextChanged" Width="117px"></asp:TextBox>
+        <asp:TextBox ID="txtContra" runat="server" OnTextChanged="txtNickName0_TextChanged" Width="117px" TextMode="Password"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;Confirm Password:&nbsp;
-        <asp:TextBox ID="txtConfContra" runat="server" Width="103px"></asp:TextBox>
+        <asp:TextBox ID="txtConfContra" runat="server" Width="103px" TextMode="Password"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,9 +60,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnGuardar" runat="server" Text="Save" Width="140px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="imgFirma" runat="server" />
+        <asp:Button ID="btnGuardar" runat="server" class="w3-button w3-green" Text="Save" Width="140px" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="imgFirma" runat="server" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
             </div>
 </asp:Content>

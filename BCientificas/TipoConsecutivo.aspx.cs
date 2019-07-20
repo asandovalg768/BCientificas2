@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace BCientificas
 {
-    public partial class Formulario_web115 : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnNuevo_Click(object sender, EventArgs e)
         {
 
         }

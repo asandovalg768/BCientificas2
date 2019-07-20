@@ -5,17 +5,19 @@
     <siteMapNode url="" title="Security" description="Seguridad">
       <siteMapNode url="" title="Users" description="Usuarios">
       <siteMapNode url="CrearUsuario.aspx" title="Create User" description="Crear Usuario"/>
-        <siteMapNode url="Roles.aspx" title="Role" description="Roles"/>
+        <siteMapNode url="RolesSimples.aspx" title="Simple Role" description="Simple Role"/>
+        <siteMapNode url="RolesLab.aspx" title="Lab Role" description="Lab Role"/>
+        <siteMapNode url="Puestos.aspx" title="Posts" description="Posts"/>
       
       </siteMapNode>
-       <siteMapNode url="TiposConsecutivos.aspx" title="Consecutive Types" description="TiposConsecutivos"/>
+       <siteMapNode url="TipoConsecutivo.aspx" title="Consecutive Types" description="TiposConsecutivos"/>
        <siteMapNode url="Consecutivos.aspx" title="Consecutive" description="Consecutivos"/>
        <siteMapNode url="NivelAcademico.aspx" title="Academic level" description="NivelAcademico"/>
     
     </siteMapNode>
     <siteMapNode url="" title="Administration" description="Administración">
-     <siteMapNode url="RamasCientificas.aspx" title="Scientific branches" description="Ramas Cientificas"/>
-      <siteMapNode url="Proyectos.aspx" title="Projects" description="Proyectos"/>
+     <siteMapNode url="RamasCientifica.aspx" title="Scientific branches" description="Ramas Cientificas"/>
+      <siteMapNode url="Proyecto.aspx" title="Projects" description="Proyectos"/>
       <siteMapNode url="BitacoraExperimental.aspx" title="Experimental Binnacle" description="Bitacora Experimental"/>
       
     </siteMapNode>

@@ -73,13 +73,13 @@
         Final Range&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input id="lblPoseeRango0" name="lblPoseeRango0" class="form-control" type="text" placeholder=""><br />
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Accept" Width="82px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Accept" Width="94px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Delete" Width="87px" />
+        <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Delete" Width="89px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" OnClick="Button1_Click" Text="Close" Width="94px" />
-        c</span></div>
+        <asp:Button ID="Button3" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Close" Width="94px" />
+        </span></div>
     
   </div>
 

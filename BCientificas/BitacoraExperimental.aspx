@@ -100,7 +100,7 @@
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:Button ID="btnSubir" runat="server" Text="Upload" Width="78px" />
+                                    &nbsp;<asp:Button ID="btnSubir" runat="server" Text="Upload" class="w3-button w3-green"  Width="103px" />
                                 </div>
                             </td>
                             <td>
@@ -131,7 +131,7 @@
                             <td>
                                 &nbsp;</td>
                             <td>
-                                <asp:Button ID="btnGuardarBitacoraEx" runat="server" Text="Save" Width="83px" />
+                                <asp:Button class="w3-button w3-green" ID="btnGuardarBitacoraEx" runat="server" Text="Save" Width="109px" />
                             </td>
                         </tr>
                 </table>
