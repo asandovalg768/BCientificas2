@@ -72,7 +72,6 @@ namespace BLL
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
             {
-                //insertar en la table de errores
                 HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                 return false;
             }
@@ -85,7 +84,6 @@ namespace BLL
                 ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
                 {
-                    //insertar en la table de errores
                     HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                     return false;
                 }
@@ -111,7 +109,6 @@ namespace BLL
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
             {
-                //insertar en la table de errores
                 HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                 return false;
             }
@@ -149,7 +146,7 @@ namespace BLL
             }
         }
 
-        public UsuariosLog BuscarUsuario(string userCode)
+        public UsuariosLog BuscaUsuario(string userCode)
         {
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
@@ -160,7 +157,7 @@ namespace BLL
             }
             else
             {
-                sql = "sp_Carga_Usuario**************************************";
+                sql = "sp_load***************";
                 ParamStruct[] parametros = new ParamStruct[2];
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Usuario_id", SqlDbType.VarChar, userCode);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Password", SqlDbType.VarChar, "password");
