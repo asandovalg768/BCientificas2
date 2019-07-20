@@ -18,5 +18,10 @@ namespace BCientificas
         {
 
         }
+
+        protected void txaDescripcionError_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

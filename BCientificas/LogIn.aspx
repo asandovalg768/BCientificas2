@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <div>
-            <h1 class="h4">Ingresar</h1>
+            <h1 class="h4">loginp</h1>
 
 
             <div class="user">

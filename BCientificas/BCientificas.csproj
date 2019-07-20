@@ -76,10 +76,12 @@
     <Content Include="ConsecutivoEditar.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Consecutivos.aspx" />
-    <Content Include="Formulario web1.aspx" />
+    <Content Include="VerNivelAcademico.aspx" />
+    <Content Include="RolesLab.aspx" />
+    <Content Include="VerPuestos.aspx" />
     <Content Include="RolesSimples.aspx" />
     <Content Include="Puestos.aspx" />
-    <Content Include="RolesEditar.aspx" />
+    <Content Include="EditarRolesLab.aspx" />
     <Content Include="Roles.aspx" />
     <Content Include="RamasCientifica.aspx" />
     <Content Include="LogIn.aspx" />
@@ -146,12 +148,26 @@
     <Compile Include="Consecutivos.aspx.designer.cs">
       <DependentUpon>Consecutivos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formulario web1.aspx.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    <Compile Include="VerNivelAcademico.aspx.cs">
+      <DependentUpon>VerNivelAcademico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formulario web1.aspx.designer.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    <Compile Include="VerNivelAcademico.aspx.designer.cs">
+      <DependentUpon>VerNivelAcademico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RolesLab.aspx.cs">
+      <DependentUpon>RolesLab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RolesLab.aspx.designer.cs">
+      <DependentUpon>RolesLab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerPuestos.aspx.cs">
+      <DependentUpon>VerPuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerPuestos.aspx.designer.cs">
+      <DependentUpon>VerPuestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="RolesSimples.aspx.cs">
       <DependentUpon>RolesSimples.aspx</DependentUpon>
@@ -167,12 +183,12 @@
     <Compile Include="Puestos.aspx.designer.cs">
       <DependentUpon>Puestos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RolesEditar.aspx.cs">
-      <DependentUpon>RolesEditar.aspx</DependentUpon>
+    <Compile Include="EditarRolesLab.aspx.cs">
+      <DependentUpon>EditarRolesLab.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RolesEditar.aspx.designer.cs">
-      <DependentUpon>RolesEditar.aspx</DependentUpon>
+    <Compile Include="EditarRolesLab.aspx.designer.cs">
+      <DependentUpon>EditarRolesLab.aspx</DependentUpon>
     </Compile>
     <Compile Include="Roles.aspx.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
