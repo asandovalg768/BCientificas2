@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitacoraExperimentalLog.cs" />
+    <Compile Include="BitadocasLog.cs" />
+    <Compile Include="ConsecutivosLog.cs" />
+    <Compile Include="DescargasLog.cs" />
+    <Compile Include="ErroresLog.cs" />
+    <Compile Include="ExperimentosLog.cs" />
+    <Compile Include="NivelAcademicoLog.cs" />
+    <Compile Include="PrivilegiosLog.cs" />
+    <Compile Include="PrivilegiosUsuariosLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProyectosLog.cs" />
+    <Compile Include="PuestosLog.cs" />
+    <Compile Include="RamasCientificasLog.cs" />
+    <Compile Include="TipoConsecutivoLog.cs" />
+    <Compile Include="UsuariosLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6AD0EB6F-BFC8-4280-A1D1-963A696C1758}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
