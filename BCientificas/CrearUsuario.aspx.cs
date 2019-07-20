@@ -18,5 +18,15 @@ namespace BCientificas
         {
 
         }
+
+        protected void txt2Apellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtNickName0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

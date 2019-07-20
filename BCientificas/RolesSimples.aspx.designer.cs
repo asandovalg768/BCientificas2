@@ -49,13 +49,13 @@ namespace BCientificas {
         protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
         
         /// <summary>
-        /// Control CheckBox4.
+        /// Control CheckBox6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox6;
         
         /// <summary>
         /// Control btnActualizar.

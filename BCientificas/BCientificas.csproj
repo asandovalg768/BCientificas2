@@ -76,7 +76,8 @@
     <Content Include="ConsecutivoEditar.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Consecutivos.aspx" />
-    <Content Include="VerUsuarios.aspx" />
+    <Content Include="Formulario web1.aspx" />
+    <Content Include="RolesSimples.aspx" />
     <Content Include="Puestos.aspx" />
     <Content Include="RolesEditar.aspx" />
     <Content Include="Roles.aspx" />
@@ -145,12 +146,19 @@
     <Compile Include="Consecutivos.aspx.designer.cs">
       <DependentUpon>Consecutivos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VerUsuarios.aspx.cs">
-      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+    <Compile Include="Formulario web1.aspx.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VerUsuarios.aspx.designer.cs">
-      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+    <Compile Include="Formulario web1.aspx.designer.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RolesSimples.aspx.cs">
+      <DependentUpon>RolesSimples.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RolesSimples.aspx.designer.cs">
+      <DependentUpon>RolesSimples.aspx</DependentUpon>
     </Compile>
     <Compile Include="Puestos.aspx.cs">
       <DependentUpon>Puestos.aspx</DependentUpon>

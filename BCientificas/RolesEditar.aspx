@@ -5,6 +5,9 @@
             width: 461px;
             height: 274px;
         }
+        .auto-style3 {
+            margin-left: 80px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,15 +19,17 @@
             <div>
                 <asp:TextBox ID="txtNombreRol" runat="server">Nombre</asp:TextBox>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ListBox ID="lstbRoles" runat="server" Height="48px" Width="169px"></asp:ListBox>
-            </div>
-            <div>
-                <asp:TextBox ID="txtDescripcion" runat="server">Descripcion</asp:TextBox>
+                <asp:ListBox ID="lstbRoles" runat="server" Height="105px" Width="169px"></asp:ListBox>
                 <br />
             </div>
-            <div>
+            <div class="auto-style3">
+                <asp:TextBox ID="txtDescripcion" runat="server" Width="322px">Descripcion</asp:TextBox>
+                <br />
+                <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" />
-                 <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" />
             &nbsp;&nbsp;&nbsp;
             </div>
 
