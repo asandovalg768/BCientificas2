@@ -47,33 +47,66 @@ namespace BLL
 
         #region Metodos
 
-        public DataSet CargarNiveleAcademico()
+        public Boolean ActualizaNivelAcademico(NivelAcademicoLog nivel)
         {
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
             {
-                //insertar en la table de errores
                 HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
-                return null;
+                return false;
             }
             else
             {
-                sql = "sp**************** ";
-                ParamStruct[] parametros = new ParamStruct[1];
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Pass", SqlDbType.VarChar, "pass");
-                ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
+                sql = "usp_Nivel_Academico_Update";
+                ParamStruct[] parametros = new ParamStruct[4];
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Tipo", SqlDbType.VarChar, nivel.Tipo);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre", SqlDbType.VarChar, nivel.Nombre);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Completado", SqlDbType.VarChar, nivel.Completado);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Detalle", SqlDbType.VarChar, nivel.Detalle);
+                DAL.DAL.conectar(cnn, ref error, ref numeroError);
+                DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
                 {
-                    //insertar en la table de errores
                     HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
-                    return null;
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return false;
                 }
                 else
                 {
-                    ds.Tables[0].Columns[0].ColumnName = "Nivel Academico";
-                    ds.Tables[0].Columns[1].ColumnName = "Nombre";
-                    ds.Tables[0].Columns[2].ColumnName = "Detalle";
-                    return ds;
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return true;
+                }
+            }
+        }
+
+        public Boolean InsertaNivelAcademico(NivelAcademicoLog nivel)
+        {
+            cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
+            if (cnn == null)
+            {
+                HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                return false;
+            }
+            else
+            {
+                sql = "usp_Nivel_Academico_Insert";
+                ParamStruct[] parametros = new ParamStruct[4];
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Tipo", SqlDbType.VarChar, nivel.Tipo);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre", SqlDbType.VarChar, nivel.Nombre);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Completado", SqlDbType.VarChar, nivel.Completado);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Detalle", SqlDbType.VarChar, nivel.Detalle);
+                DAL.DAL.conectar(cnn, ref error, ref numeroError);
+                DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
+                if (numeroError != 0)
+                {
+                    HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return false;
+                }
+                else
+                {
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return true;
                 }
             }
         }

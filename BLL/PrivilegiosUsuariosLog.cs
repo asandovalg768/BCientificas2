@@ -35,12 +35,6 @@ namespace BLL
 
         #endregion
 
-        SqlConnection cnn;
-        string error;
-        int numeroError;
-        string sql;
-        DataSet ds;
-
         #region Metodos
 
 
