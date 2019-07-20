@@ -26,7 +26,7 @@
             <table id="navegacion"  border="0" style="height: 26px">
     <tr>
     <td class="auto-style1">
-        Usted esta en:
+        You are here:
 
         
 
@@ -40,7 +40,7 @@
     
     </td>
         <td class="auto-style1">
-            Usuario:<asp:LoginName ID="LoginName1" runat="server" />
+            User:<asp:LoginName ID="LoginName1" runat="server" />
             <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx"
                 LogoutText="Cerrar Sesion" OnLoggingOut="LoginStatus1_LoggingOut" />
         </td>
@@ -76,5 +76,17 @@
         </div>
            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
     </form>
+    <div class="footer">
+        <p>Translate this page:</p>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <p>You can translate the content of this page by selecting a language in the select box.</p>
+    </div>
 </body>
 </html>

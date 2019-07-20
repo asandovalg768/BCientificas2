@@ -9,13 +9,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
         <div class="auto-style2">
-            <h2>Bitacora Experimental</h2>
+            <h2>Experimental Binnacle</h2>
 
             <div>
                 <table>
                         <tr>
                             <td>
-                                <asp:Label ID="lblNombreProyecto" runat="server" Text="Nombre del Proyecto:"></asp:Label>
+                                <asp:Label ID="lblNombreProyecto" runat="server" Text="Project name:"></asp:Label>
                             &nbsp;&nbsp;
                                 </td>
                             <td>
@@ -26,7 +26,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:Label ID="lblCodigoProyecto" runat="server" Text="Codigo de Proyecto:"></asp:Label>
+                                <asp:Label ID="lblCodigoProyecto" runat="server" Text="Project Code:"></asp:Label>
                             </td>
                             <td>
                                 <div class="form-group">
@@ -62,7 +62,7 @@
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:Label ID="lblNombreExp" runat="server" Text="Nombre del Experimento:"></asp:Label>
+                                    &nbsp;<asp:Label ID="lblNombreExp" runat="server" Text="Name of the experiment:"></asp:Label>
                                 </div>
                             </td>
                             <td>
@@ -72,7 +72,7 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:Label ID="lblFecha" runat="server" Text="Fecha:"></asp:Label>
+                                    &nbsp;<asp:Label ID="lblFecha" runat="server" Text="Date:"></asp:Label>
                                 </div>
                             </td>
                             <td>
@@ -94,13 +94,13 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:Label ID="lblDetalleEx" runat="server" Text="Detalle de Experimento:"></asp:Label>
+                                    &nbsp;<asp:Label ID="lblDetalleEx" runat="server" Text="Experiment Detail:"></asp:Label>
                                 </div>
                             </td>
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:Button ID="btnSubir" runat="server" Text="Subir" Width="78px" />
+                                    &nbsp;<asp:Button ID="btnSubir" runat="server" Text="Upload" Width="78px" />
                                 </div>
                             </td>
                             <td>
@@ -131,7 +131,7 @@
                             <td>
                                 &nbsp;</td>
                             <td>
-                                <asp:Button ID="btnGuardarBitacoraEx" runat="server" Text="Guardar" Width="83px" />
+                                <asp:Button ID="btnGuardarBitacoraEx" runat="server" Text="Save" Width="83px" />
                             </td>
                         </tr>
                 </table>
