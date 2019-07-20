@@ -13,5 +13,15 @@ namespace BCientificas
         {
 
         }
+
+        protected void TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

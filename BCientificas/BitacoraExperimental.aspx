@@ -77,7 +77,7 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    &nbsp;<asp:TextBox ID="txtFecha" type="Date" CssClass="form-control input-md" Width="108px" runat="server"></asp:TextBox>
+                                    &nbsp;<asp:TextBox ID="txtFecha" type="Date" CssClass="form-control input-md" Width="108px" runat="server" TextMode="Date"></asp:TextBox>
                                 </div>
                             </td>
                         </tr>

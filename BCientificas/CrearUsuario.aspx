@@ -16,40 +16,42 @@
             <br />
 &nbsp;&nbsp;&nbsp;
         
-        <asp:TextBox ID="txtCodigo" runat="server" ForeColor="Silver" ReadOnly="True">Code</asp:TextBox>
+            Code:&nbsp;
+        
+        <asp:TextBox ID="txtCodigo" runat="server" ReadOnly="True"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Image ID="imgFoto" runat="server" />
         <br />
         <br />
         <br />
-        &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNombre" runat="server" ForeColor="Silver">Name</asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txt1Apellido" runat="server" ForeColor="Silver">Last Name</asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txt2Apellido" runat="server" ForeColor="Silver" OnTextChanged="txt2Apellido_TextChanged">Second Last Name</asp:TextBox>
+        &nbsp;&nbsp;&nbsp;Name:&nbsp;&nbsp;
+        <asp:TextBox ID="txtNombre" runat="server" style="width: 128px"></asp:TextBox>
+            &nbsp;&nbsp;Last Name:&nbsp;&nbsp;
+        <asp:TextBox ID="txt1Apellido" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            <br />
+&nbsp;&nbsp; Second Last Name:
+        <asp:TextBox ID="txt2Apellido" runat="server" OnTextChanged="txt2Apellido_TextChanged"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp; Role Type:&nbsp;
+        <asp:TextBox ID="txtTipoRol" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;<br />
+            <br />
+&nbsp;&nbsp; Phone:&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtTel0" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;Position:&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtPuesto" runat="server"></asp:TextBox>
+            <br />
         <br />
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtTipoRol" runat="server" ForeColor="Silver">Type of Rol</asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtTel0" runat="server" ForeColor="Silver">Phone</asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPuesto" runat="server" ForeColor="Silver">Position</asp:TextBox>
-        <br />
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNickName" runat="server" ForeColor="Silver" Width="186px">LogIn (nickname)</asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNivelAca" runat="server" ForeColor="Silver" Width="214px">Academic Level</asp:TextBox>
+        &nbsp;&nbsp; Nickname:
+        <asp:TextBox ID="txtNickName" runat="server" Width="127px"></asp:TextBox>
+&nbsp;Academic Level:&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtNivelAca" runat="server" Width="115px"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtContra" runat="server" ForeColor="Silver" OnTextChanged="txtNickName0_TextChanged" Width="186px">Password</asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtConfContra" runat="server" ForeColor="Silver" Width="186px">Confirm Password</asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;Password:&nbsp;&nbsp;
+        <asp:TextBox ID="txtContra" runat="server" OnTextChanged="txtNickName0_TextChanged" Width="117px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;Confirm Password:&nbsp;
+        <asp:TextBox ID="txtConfContra" runat="server" Width="103px"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,7 +61,7 @@
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnGuardar" runat="server" Text="Save" Width="140px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Image ID="imgFirma" runat="server" />
         <br />
             </div>

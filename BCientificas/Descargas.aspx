@@ -15,9 +15,10 @@
 <div class="form-group">
   <div class="col-md-4">
       <div class="form-group">
-  <label class="col-md-4 control-label" for="txtFechaError">Date</label>  
-  <div class="col-md-4">
+  <label class="col-md-4 control-label" for="txtFechaError">Date:&nbsp; </label>
       <asp:TextBox ID="txtFechaError" name="txtFechaError" type="date" placeholder="" class="form-control input-md" runat="server"></asp:TextBox>
+       
+  &nbsp;<div class="col-md-4">
        
   </div>
            <br/>
@@ -27,7 +28,7 @@
                        
                                 <asp:ListBox ID="lstbDescargas" runat="server" Width="135px" >
                     </asp:ListBox>
-                            &nbsp;&nbsp;<asp:TextBox class="form-control" ID="txaDescripcionError" name="txaDescripcionError" runat="server" Height="63px" Width="186px" OnTextChanged="txaDescripcionError_TextChanged">Error Description</asp:TextBox>               
+                            &nbsp;&nbsp;<asp:TextBox class="form-control" ID="txaDescripcionError" name="txaDescripcionError" runat="server" Height="63px" Width="186px" OnTextChanged="txaDescripcionError_TextChanged"></asp:TextBox>               
                                 &nbsp;<div class="form-group">
                                     &nbsp;</div>
          

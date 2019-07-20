@@ -14,8 +14,10 @@
 <div class="form-group">
   <div class="col-md-4">
       <div class="form-group">
-          Date<div class="col-md-4">
-      <asp:TextBox ID="txtFechaError" name="txtFechaError" type="date" placeholder="" class="form-control input-md" runat="server"></asp:TextBox>
+          Date:&nbsp;
+      <asp:TextBox ID="txtFechaError" name="txtFechaError" type="date" placeholder="" class="form-control input-md" runat="server" OnTextChanged="txtFechaError_TextChanged"></asp:TextBox>
+       
+          <div class="col-md-4">
        
   </div>
            <br/>

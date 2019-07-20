@@ -13,5 +13,10 @@ namespace BCientificas
         {
 
         }
+
+        protected void txtFechaError_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
