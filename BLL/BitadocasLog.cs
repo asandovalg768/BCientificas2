@@ -17,7 +17,7 @@ namespace BLL
         {
         }
 
-        public BitadocasLog(int cod_Usuario, DateTime fecha_Inicio, DateTime fecha_Final, int tipo, string descripcion, string link, DateTime fecha_Hora, string consecutivo, string registro_Detalle, int cod_Bitacora)
+        public BitadocasLog(string cod_Usuario, string fecha_Inicio, string fecha_Final, string tipo, string descripcion, string link, string fecha_Hora, string consecutivo, string registro_Detalle, string cod_Bitacora, SqlConnection cnn, string error, int numeroError, string sql, DataSet ds)
         {
             Cod_Usuario = cod_Usuario;
             Fecha_Inicio = fecha_Inicio;
@@ -29,22 +29,29 @@ namespace BLL
             Consecutivo = consecutivo;
             Registro_Detalle = registro_Detalle;
             Cod_Bitacora = cod_Bitacora;
+            this.cnn = cnn;
+            this.error = error;
+            this.numeroError = numeroError;
+            this.sql = sql;
+            this.ds = ds;
         }
+
+
 
         #endregion
 
 
         #region Propiedades
-        public int Cod_Usuario { get; set; }
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Final { get; set; }
-        public int Tipo { get; set; }
+        public string Cod_Usuario { get; set; }
+        public string Fecha_Inicio { get; set; }
+        public string Fecha_Final { get; set; }
+        public string Tipo { get; set; }
         public string Descripcion { get; set; }
         public string Link { get; set; }
-        public DateTime Fecha_Hora { get; set; }
+        public string Fecha_Hora { get; set; }
         public string Consecutivo { get; set; }
         public string Registro_Detalle { get; set; }
-        public int Cod_Bitacora { get; set; }
+        public string Cod_Bitacora { get; set; }
 
 
         #endregion

@@ -35,8 +35,8 @@ namespace BLL
         public int Cod_Tipo_Consecutivo { get; set; }
 
         public string Descripcion { get; set; }
-        public int Valor { get; set; }
-        public Boolean Posee_Prefijo { get; set; }
+        public float Valor { get; set; }
+        public string Posee_Prefijo { get; set; }
         public string Prefijo { get; set; }
 
 

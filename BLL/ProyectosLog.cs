@@ -16,7 +16,7 @@ namespace BLL
         {
         }
 
-        public ProyectosLog(int cod_Proyecto, string nombre, string descripcion, int cod_Rama, float precio, string autor, DateTime fecha_Creacion, string idioma)
+        public ProyectosLog(string cod_Proyecto, string nombre, string descripcion, int cod_Rama, float precio, string autor, string fecha_Creacion, string idioma, SqlConnection cnn, string error, int numeroError, string sql, DataSet ds)
         {
             Cod_Proyecto = cod_Proyecto;
             Nombre = nombre;
@@ -26,21 +26,27 @@ namespace BLL
             Autor = autor;
             Fecha_Creacion = fecha_Creacion;
             Idioma = idioma;
+            this.cnn = cnn;
+            this.error = error;
+            this.numeroError = numeroError;
+            this.sql = sql;
+            this.ds = ds;
         }
+
+
 
 
         #endregion
 
 
         #region Propiedades
-        public int Cod_Bitacora_Experimental { get; set; }
-        public int Cod_Proyecto { get; set; }
+        public string Cod_Proyecto { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Cod_Rama { get; set; }
         public float Precio { get; set; }
         public string Autor { get; set; }
-        public DateTime Fecha_Creacion { get; set; }
+        public string Fecha_Creacion { get; set; }
         public string Idioma { get; set; }
 
 

@@ -16,7 +16,7 @@ namespace BLL
         {
         }
 
-        public PrivilegiosUsuariosLog(int cod_Privilegio, int cod_Usuario, bool activo)
+        public PrivilegiosUsuariosLog(int cod_Privilegio, string cod_Usuario, bool activo)
         {
             Cod_Privilegio = cod_Privilegio;
             Cod_Usuario = cod_Usuario;
@@ -29,7 +29,7 @@ namespace BLL
 
         #region Propiedades
         public int Cod_Privilegio { get; set; }
-        public int Cod_Usuario { get; set; }
+        public string Cod_Usuario { get; set; }
         public Boolean Activo { get; set; }
 
 

@@ -15,7 +15,7 @@ namespace BLL
         {
         }
 
-        public ExperimentosLog(int cod_Experimento, int cod_Proyecto, string nombre, int cod_Usuario)
+        public ExperimentosLog(string cod_Experimento, string cod_Proyecto, string nombre, string cod_Usuario)
         {
             Cod_Experimento = cod_Experimento;
             Cod_Proyecto = cod_Proyecto;
@@ -28,10 +28,10 @@ namespace BLL
 
 
         #region Propiedades
-        public int Cod_Experimento { get; set; }
-        public int Cod_Proyecto { get; set; }
+        public string Cod_Experimento { get; set; }
+        public string Cod_Proyecto { get; set; }
         public string Nombre { get; set; }
-        public int Cod_Usuario { get; set; }
+        public string Cod_Usuario { get; set; }
 
 
         #endregion

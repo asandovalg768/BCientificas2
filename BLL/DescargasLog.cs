@@ -16,7 +16,7 @@ namespace BLL
         {
         }
 
-        public DescargasLog(int cod_Descargas, int cod_Usuario, DateTime fecha, int cod_Proyecto)
+        public DescargasLog(int cod_Descargas, string cod_Usuario, string fecha, string cod_Proyecto)
         {
             Cod_Descargas = cod_Descargas;
             Cod_Usuario = cod_Usuario;
@@ -30,9 +30,9 @@ namespace BLL
 
         #region Propiedades
         public int Cod_Descargas { get; set; }
-        public int Cod_Usuario { get; set; }
-        public DateTime Fecha { get; set; }
-        public int Cod_Proyecto { get; set; }
+        public string Cod_Usuario { get; set; }
+        public string Fecha { get; set; }
+        public string Cod_Proyecto { get; set; }
 
 
         #endregion

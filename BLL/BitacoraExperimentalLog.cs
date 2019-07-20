@@ -16,7 +16,7 @@ namespace BLL
         {
         }
 
-        public BitacoraExperimentalLog(int cod_Bitacora_Experimental, string objetivos, string descripcion, string equipo, string procedimientos, int cod_Experimentos, DateTime fecha, bool firma)
+        public BitacoraExperimentalLog(string cod_Bitacora_Experimental, string objetivos, string descripcion, string equipo, string procedimientos, string cod_Experimentos, string fecha, string firma)
         {
             Cod_Bitacora_Experimental = cod_Bitacora_Experimental;
             Objetivos = objetivos;
@@ -33,7 +33,7 @@ namespace BLL
 
 
         #region Propiedades
-        public int Cod_Bitacora_Experimental { get; set; }
+        public string Cod_Bitacora_Experimental { get; set; }
 
         public string Objetivos { get; set; }
 
@@ -43,11 +43,11 @@ namespace BLL
 
         public string Procedimientos { get; set; }
 
-        public int Cod_Experimentos { get; set; }
+        public string Cod_Experimentos { get; set; }
 
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
 
-        public Boolean Firma { get; set; }
+        public string Firma { get; set; }
 
 
         #endregion

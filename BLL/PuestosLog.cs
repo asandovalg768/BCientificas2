@@ -16,7 +16,7 @@ namespace BLL
         {
         }
 
-        public PuestosLog(int cod_Puesto, string nombre)
+        public PuestosLog(string cod_Puesto, string nombre)
         {
             Cod_Puesto = cod_Puesto;
             Nombre = nombre;
@@ -27,7 +27,7 @@ namespace BLL
 
 
         #region Propiedades
-        public int Cod_Puesto { get; set; }
+        public string Cod_Puesto { get; set; }
         public string Nombre { get; set; }
 
 

@@ -17,7 +17,7 @@ namespace BLL
         {
         }
 
-        public NivelAcademicoLog(int cod_Nivel_Academico, int tipo, string nombre, bool completado, string detalle)
+        public NivelAcademicoLog(string cod_Nivel_Academico, string tipo, string nombre, bool completado, string detalle)
         {
             Cod_Nivel_Academico = cod_Nivel_Academico;
             Tipo = tipo;
@@ -30,8 +30,8 @@ namespace BLL
 
 
         #region Propiedades
-        public int Cod_Nivel_Academico { get; set; }
-        public int Tipo { get; set; }
+        public string Cod_Nivel_Academico { get; set; }
+        public string Tipo { get; set; }
         public string Nombre { get; set; }
         public Boolean Completado { get; set; }
         public string Detalle { get; set; }
