@@ -123,7 +123,7 @@ namespace BLL
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Telefono", SqlDbType.VarChar, username.Telefono);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Username", SqlDbType.VarChar, username.Username);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Pass", SqlDbType.VarChar, username.Pass);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Easy_Pay", SqlDbType.VarChar, username.Easy_Pay);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Easy_Pay", SqlDbType.Float, username.Easy_Pay);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rol", SqlDbType.VarChar, username.Rol);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Cod_Nivel_Academico", SqlDbType.VarChar, username.Cod_Nivel_Academico);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 10, "@Cod_Puesto", SqlDbType.VarChar, username.Cod_Puesto);
@@ -133,7 +133,6 @@ namespace BLL
                 DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
                 {
-                    //insertar en la table de errores
                     HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                     DAL.DAL.desconectar(cnn, ref error, ref numeroError);
                     return false;
@@ -151,20 +150,17 @@ namespace BLL
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
             {
-                //insertar en la table de errores
                 HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                 return null;
             }
             else
             {
-                sql = "sp_load***************";
-                ParamStruct[] parametros = new ParamStruct[2];
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Usuario_id", SqlDbType.VarChar, userCode);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Password", SqlDbType.VarChar, "password");
+                sql = "usp_Usuarios_Load";
+                ParamStruct[] parametros = new ParamStruct[1];
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Usuario", SqlDbType.VarChar, userCode);
                 ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
                 {
-                    //insertar en la table de errores
                     HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                     return null;
                 }
@@ -178,12 +174,53 @@ namespace BLL
                     user.Telefono = ds.Tables[0].Rows[0][4].ToString();
                     user.Username = ds.Tables[0].Rows[0][5].ToString();
                     user.Pass = ds.Tables[0].Rows[0][6].ToString();
-                    //user.Easy_Pay = ds.Tables[0].Rows[0][7].ToString();
+                    //user.Easy_Pay = Convert.ToBase64String(ds.Tables[0].Rows[0][7].ToString());
                     user.Rol = ds.Tables[0].Rows[0][8].ToString();
                     user.Cod_Nivel_Academico = ds.Tables[0].Rows[0][9].ToString();
                     user.Cod_Puesto = ds.Tables[0].Rows[0][10].ToString();
 
                     return user;
+                }
+            }
+        }
+
+        public Boolean ActualizaUsuario(UsuariosLog username)
+        {
+            cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
+            if (cnn == null)
+            {
+                HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                return false;
+            }
+            else
+            {
+                sql = "usp_Usuarios_Update";
+                ParamStruct[] parametros = new ParamStruct[12];
+                //DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Usuario", SqlDbType.Int, username.Cod_Usuario);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre", SqlDbType.VarChar, username.Nombre);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Primer_Apellido", SqlDbType.VarChar, username.Primer_Apellido);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Segundo_Apellido", SqlDbType.VarChar, username.Segundo_Apellido);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Telefono", SqlDbType.VarChar, username.Telefono);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Username", SqlDbType.VarChar, username.Username);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Pass", SqlDbType.VarChar, username.Pass);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Easy_Pay", SqlDbType.Float, username.Easy_Pay);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rol", SqlDbType.VarChar, username.Rol);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Cod_Nivel_Academico", SqlDbType.VarChar, username.Cod_Nivel_Academico);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 10, "@Cod_Puesto", SqlDbType.VarChar, username.Cod_Puesto);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Foto", SqlDbType.VarChar, username.Url_Foto);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Firma", SqlDbType.VarChar, username.Url_Firma);
+                DAL.DAL.conectar(cnn, ref error, ref numeroError);
+                DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
+                if (numeroError != 0)
+                {
+                    HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return false;
+                }
+                else
+                {
+                    DAL.DAL.desconectar(cnn, ref error, ref numeroError);
+                    return true;
                 }
             }
         }
