@@ -116,7 +116,7 @@ namespace BLL
             {
                 sql = "usp_Usuarios_Insert";
                 ParamStruct[] parametros = new ParamStruct[13];
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Usuario", SqlDbType.Int, username.Cod_Usuario);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Usuario", SqlDbType.VarChar, username.Cod_Usuario);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre", SqlDbType.VarChar, username.Nombre);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Primer_Apellido", SqlDbType.VarChar, username.Primer_Apellido);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Segundo_Apellido", SqlDbType.VarChar, username.Segundo_Apellido);
