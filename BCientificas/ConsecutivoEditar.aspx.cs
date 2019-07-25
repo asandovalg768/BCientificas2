@@ -13,13 +13,12 @@ namespace BCientificas
     public partial class Formulario_web111 : System.Web.UI.Page
     {
         ConsecutivosLog logica = new ConsecutivosLog();
-        TipoConsecutivoLog  tipoCon = new TipoConsecutivoLog();
-        static int id = 1;
+        TipoConsecutivoLog tipoCon = new TipoConsecutivoLog();
+        static int cod = 1;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvConsecutivos.DataSource = logica.CargaConsecutivos().Tables[0];
-            gvConsecutivos.DataBind();
+           
         }
 
         protected void ddlDescripcion_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,13 +31,13 @@ namespace BCientificas
             if (Page.IsValid)
             {
                 ConsecutivosLog consecutivo = new ConsecutivosLog();
-                consecutivo.Cod_Tipo_Consecutivo = id;
-                consecutivo.Descripcion = lblDescripcion.Text;
-                consecutivo.Valor = lblConsecutivo.Text;
+                consecutivo.Cod_Consecutivo = cod;
+                consecutivo.Descripcion = txtDescripcion.Text;
+                consecutivo.Valor = txtConsecutivo.Text;
                 if (chkPoseePrefijo.Checked)
                 {
                     consecutivo.Posee_Prefijo = "true";
-                    consecutivo.Prefijo = lblPrefijo.txt;
+                    consecutivo.Prefijo = txtPrefijo.Text;
                 }
                 else
                 {
@@ -48,16 +47,16 @@ namespace BCientificas
                 if (chkPoseeRango.Checked)
                 {
                     consecutivo.Posee_Rango = "true";
-                    consecutivo.Rango_Inicio = lblPoseeRango.Text;
-                    consecutivo.Rango_Final = lblPoseeRango0.Text;
+                    consecutivo.Rango_Inicio = txtRangoIni.Text;
+                    consecutivo.Rango_Final = txtRangoFin.Text;
                 }
                 else
                 {
                     consecutivo.Posee_Rango = "false";
-                    consecutivo.lblPoseeRango = "0";
-                    consecutivo.lblPoseeRango0 = "0";
+                    consecutivo.Rango_Inicio = "0";
+                    consecutivo.Rango_Final = "0";
                 }
-                consecutivo.Cod_Tipo_Consecutivo = logica.BuscaTipoConsecutivo(codConsecutivo).tipoCon.TipoConsecutivo_Id;
+                consecutivo.Tipo_Consecutivo_Cod = logica.BuscaConsecutivo(cod).Tipo_Consecutivo_Cod;
                 if (logica.ActualizaConsecutivo(consecutivo))
                 {
 
@@ -69,15 +68,27 @@ namespace BCientificas
 
         protected void chkPoseePrefijo_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkPoseeRango.Checked == true)
+            if (chkPoseePrefijo.Checked == true)
             {
-                lblPoseeRango.ReadOnly = false;
-                lblPoseeRango0.ReadOnly = false;
+                txtPrefijo.ReadOnly = false;
             }
             else
             {
-                lblPoseeRango.ReadOnly = true;
-                lblPoseeRango0.ReadOnly = true;
+                txtPrefijo.ReadOnly = true;
+            }
+        }
+
+        protected void chkPoseeRango_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPoseeRango.Checked == true)
+            {
+                txtRangoIni.ReadOnly = false;
+                txtRangoFin.ReadOnly = false;
+            }
+            else
+            {
+                txtRangoIni.ReadOnly = true;
+                txtRangoFin.ReadOnly = true;
             }
         }
 

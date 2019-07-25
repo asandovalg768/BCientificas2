@@ -68,12 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActualizarUsuario.aspx" />
     <Content Include="BitacoraExperimental.aspx" />
     <Content Include="Bitacora.aspx" />
+    <Content Include="ConsecutivoEditar.aspx" />
     <Content Include="CrearUsuario.aspx" />
     <Content Include="Errores.aspx" />
     <Content Include="Descargas.aspx" />
-    <Content Include="ConsecutivoEditar.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Consecutivos.aspx" />
     <Content Include="VerNivelAcademico.aspx" />
@@ -92,6 +93,13 @@
     <Content Include="TipoConsecutivo.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarUsuario.aspx.cs">
+      <DependentUpon>ActualizarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarUsuario.aspx.designer.cs">
+      <DependentUpon>ActualizarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BitacoraExperimental.aspx.cs">
       <DependentUpon>BitacoraExperimental.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +113,13 @@
     </Compile>
     <Compile Include="Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsecutivoEditar.aspx.cs">
+      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsecutivoEditar.aspx.designer.cs">
+      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
     </Compile>
     <Compile Include="CrearUsuario.aspx.cs">
       <DependentUpon>CrearUsuario.aspx</DependentUpon>
@@ -126,13 +141,6 @@
     </Compile>
     <Compile Include="Descargas.aspx.designer.cs">
       <DependentUpon>Descargas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ConsecutivoEditar.aspx.cs">
-      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ConsecutivoEditar.aspx.designer.cs">
-      <DependentUpon>ConsecutivoEditar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

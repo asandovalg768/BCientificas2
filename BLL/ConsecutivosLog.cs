@@ -17,7 +17,7 @@ namespace BLL
         {
         }
 
-        public ConsecutivosLog(int cod_Consecutivo, string tipo_Consecutivo, string descripcion, string valor, string posee_Prefijo, string prefijo)
+        public ConsecutivosLog(int cod_Consecutivo, string tipo_Consecutivo, string descripcion, string valor, string posee_Prefijo, string prefijo, int tipo_Consecutivo_Cod)
         {
             Cod_Consecutivo = cod_Consecutivo;
             Tipo_Consecutivo = tipo_Consecutivo;
@@ -25,9 +25,27 @@ namespace BLL
             Valor = valor;
             Posee_Prefijo = posee_Prefijo;
             Prefijo = prefijo;
+            Tipo_Consecutivo_Cod = tipo_Consecutivo_Cod;
+        }
+
+        public ConsecutivosLog(int cod_Consecutivo, string tipo_Consecutivo, string descripcion, string valor, string posee_Prefijo, string prefijo, string posee_Rango, string rango_Inicio, string rango_Final, int tipo_Consecutivo_Cod)
+        {
+            Cod_Consecutivo = cod_Consecutivo;
+            Tipo_Consecutivo = tipo_Consecutivo;
+            Descripcion = descripcion;
+            Valor = valor;
+            Posee_Prefijo = posee_Prefijo;
+            Prefijo = prefijo;
+            Posee_Rango = posee_Rango;
+            Rango_Inicio = rango_Inicio;
+            Rango_Final = rango_Final;
+            Tipo_Consecutivo_Cod = tipo_Consecutivo_Cod;
         }
 
         #endregion
+
+
+
 
 
         #region Propiedades
@@ -38,6 +56,14 @@ namespace BLL
         public string Valor { get; set; }
         public string Posee_Prefijo { get; set; }
         public string Prefijo { get; set; }
+
+        public string Posee_Rango { get; set; }
+
+        public string Rango_Inicio { get; set; }
+
+        public string Rango_Final { get; set; }
+
+        public int Tipo_Consecutivo_Cod { get; set; }
 
 
         #endregion
@@ -79,7 +105,7 @@ namespace BLL
             }
         }
 
-        public ConsecutivosLog BuscaConsecutivo(int consecutivoID)
+        public ConsecutivosLog BuscaConsecutivo(int cod_Consecutivo)
         {
             cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
             if (cnn == null)
@@ -91,7 +117,7 @@ namespace BLL
             {
                 sql = "sp_Carga_Consecutivo";
                 ParamStruct[] parametros = new ParamStruct[2];
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Consecutivo", SqlDbType.Int, consecutivoID);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Consecutivo", SqlDbType.Int, cod_Consecutivo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Password", SqlDbType.VarChar, "password");
                 ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
@@ -108,6 +134,10 @@ namespace BLL
                     consecutivo.Valor = ds.Tables[0].Rows[0][3].ToString();
                     consecutivo.Posee_Prefijo = ds.Tables[0].Rows[0][4].ToString();
                     consecutivo.Prefijo = ds.Tables[0].Rows[0][5].ToString();
+                    consecutivo.Posee_Rango = ds.Tables[0].Rows[0][6].ToString();
+                    consecutivo.Rango_Inicio = ds.Tables[0].Rows[0][7].ToString();
+                    consecutivo.Rango_Final = ds.Tables[0].Rows[0][8].ToString();
+                    consecutivo.Tipo_Consecutivo_Cod = Convert.ToInt32(ds.Tables[0].Rows[0][9].ToString());  
                     return consecutivo;
                 }
             }
@@ -124,14 +154,18 @@ namespace BLL
             else
             {
                 sql = "sp_Actualiza_Consecutivo";
-                ParamStruct[] parametros = new ParamStruct[7];
+                ParamStruct[] parametros = new ParamStruct[9];
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Consecutivo", SqlDbType.Int, consecutivo.Cod_Consecutivo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Tipo_Consecutivo", SqlDbType.VarChar, consecutivo.Tipo_Consecutivo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Descripcion", SqlDbType.VarChar, consecutivo.Descripcion);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Valor", SqlDbType.VarChar, consecutivo.Valor);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Posee_Prefijo", SqlDbType.VarChar, consecutivo.Posee_Prefijo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Prefijo", SqlDbType.VarChar, consecutivo.Prefijo);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Password", SqlDbType.VarChar, "password");
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Posee_Rango", SqlDbType.VarChar, consecutivo.Posee_Rango);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Rango_Inicio", SqlDbType.VarChar, consecutivo.Rango_Inicio);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rango_Final", SqlDbType.VarChar, consecutivo.Rango_Final);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Tipo_Consecutivo_Cod", SqlDbType.Int, consecutivo.Tipo_Consecutivo_Cod);
+
                 DAL.DAL.conectar(cnn, ref error, ref numeroError);
                 DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
@@ -159,14 +193,17 @@ namespace BLL
             else
             {
                 sql = "sp_Inserta_Consecutivo";
-                ParamStruct[] parametros = new ParamStruct[7];
+                ParamStruct[] parametros = new ParamStruct[9];
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Consecutivo", SqlDbType.Int, consecutivo.Cod_Consecutivo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Tipo_Consecutivo", SqlDbType.VarChar, consecutivo.Tipo_Consecutivo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Descripcion", SqlDbType.VarChar, consecutivo.Descripcion);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Valor", SqlDbType.VarChar, consecutivo.Valor);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Posee_Prefijo", SqlDbType.VarChar, consecutivo.Posee_Prefijo);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Prefijo", SqlDbType.VarChar, consecutivo.Prefijo);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Password", SqlDbType.VarChar, "password");
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Posee_Rango", SqlDbType.VarChar, consecutivo.Posee_Rango);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Rango_Inicio", SqlDbType.VarChar, consecutivo.Rango_Inicio);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rango_Final", SqlDbType.VarChar, consecutivo.Rango_Final);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Tipo_Consecutivo_Cod", SqlDbType.Int, consecutivo.Tipo_Consecutivo_Cod);
                 DAL.DAL.conectar(cnn, ref error, ref numeroError);
                 DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)

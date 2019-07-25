@@ -17,7 +17,7 @@ namespace BLL
         {
         }
 
-        public UsuariosLog(string cod_Usuario, string nombre, string primer_Apellido, string segundo_Apellido, string telefono, string username, string pass, float easy_Pay, string rol, string cod_Nivel_Academico, string cod_Puesto, string url_Firma, string url_Foto, SqlConnection cnn, string error, int numeroError, string sql, DataSet ds)
+        public UsuariosLog(string cod_Usuario, string nombre, string primer_Apellido, string segundo_Apellido, string telefono, string username, string pass, float easy_Pay, string rol, string cod_Nivel_Academico, string cod_Puesto, string img_Firma, string img_Foto, SqlConnection cnn, string error, int numeroError, string sql, DataSet ds)
         {
             Cod_Usuario = cod_Usuario;
             Nombre = nombre;
@@ -30,8 +30,8 @@ namespace BLL
             Rol = rol;
             Cod_Nivel_Academico = cod_Nivel_Academico;
             Cod_Puesto = cod_Puesto;
-            Url_Firma = url_Firma;
-            Url_Foto = url_Foto;
+            Img_Firma = img_Firma;
+            Img_Foto = img_Foto;
         }
 
 
@@ -52,9 +52,9 @@ namespace BLL
         public string Cod_Nivel_Academico { get; set; }
         public string Cod_Puesto { get; set; }
 
-        public string Url_Firma { get; set; }
+        public string Img_Firma { get; set; }
 
-        public string Url_Foto { get; set; }
+        public string Img_Foto { get; set; }
 
         #endregion
 
@@ -127,8 +127,8 @@ namespace BLL
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rol", SqlDbType.VarChar, username.Rol);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Cod_Nivel_Academico", SqlDbType.VarChar, username.Cod_Nivel_Academico);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 10, "@Cod_Puesto", SqlDbType.VarChar, username.Cod_Puesto);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Foto", SqlDbType.VarChar, username.Url_Foto);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Firma", SqlDbType.VarChar, username.Url_Firma);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Foto", SqlDbType.VarChar, username.Img_Foto);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Firma", SqlDbType.VarChar, username.Img_Firma);
                 DAL.DAL.conectar(cnn, ref error, ref numeroError);
                 DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
@@ -144,6 +144,51 @@ namespace BLL
                 }
             }
         }
+
+        public DataTable CargaUsuarios()
+        {
+            cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
+            if (cnn == null)
+            {
+                //insertar en la table de errores
+                HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                return null;
+            }
+            else
+            {
+                sql = "sp_Lista_Usuario";
+                ParamStruct[] parametros = new ParamStruct[1];
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Password", SqlDbType.VarChar, "password");
+                ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
+                if (numeroError != 0)
+                {
+                    //insertar en la table de errores
+                    HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                    return null;
+                }
+                else
+                {
+                    DataTable dt = new DataTable();
+                    dt = ds.Tables[0];
+                    dt.Columns[0].ColumnName = "Cod_Usuario";
+                    dt.Columns[1].ColumnName = "Nombre";
+                    dt.Columns[2].ColumnName = "Primer_Apellido";
+                    dt.Columns[3].ColumnName = "Segundo_Apellido";
+                    dt.Columns.RemoveAt(4);
+                    dt.Columns.RemoveAt(5);
+                    dt.Columns.RemoveAt(6);
+                    dt.Columns.RemoveAt(4);
+
+
+                    return dt;
+
+
+
+                    /*return ds;*/
+                }
+            }
+        }
+
 
         public UsuariosLog BuscaUsuario(string userCode)
         {
@@ -178,6 +223,8 @@ namespace BLL
                     user.Rol = ds.Tables[0].Rows[0][8].ToString();
                     user.Cod_Nivel_Academico = ds.Tables[0].Rows[0][9].ToString();
                     user.Cod_Puesto = ds.Tables[0].Rows[0][10].ToString();
+                    user.Img_Firma = ds.Tables[0].Rows[0][11].ToString();
+                    user.Img_Foto = ds.Tables[0].Rows[0][12].ToString();
 
                     return user;
                 }
@@ -207,8 +254,8 @@ namespace BLL
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rol", SqlDbType.VarChar, username.Rol);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@Cod_Nivel_Academico", SqlDbType.VarChar, username.Cod_Nivel_Academico);
                 DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 10, "@Cod_Puesto", SqlDbType.VarChar, username.Cod_Puesto);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Foto", SqlDbType.VarChar, username.Url_Foto);
-                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Firma", SqlDbType.VarChar, username.Url_Firma);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Foto", SqlDbType.VarChar, username.Img_Foto);
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 11, "@Url_Firma", SqlDbType.VarChar, username.Img_Firma);
                 DAL.DAL.conectar(cnn, ref error, ref numeroError);
                 DAL.DAL.ejecuta_sqlcommand(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)

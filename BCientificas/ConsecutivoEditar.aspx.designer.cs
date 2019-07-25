@@ -13,13 +13,31 @@ namespace BCientificas {
     public partial class Formulario_web111 {
         
         /// <summary>
-        /// Control lblDescripcion.
+        /// Control lblDescripcion1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescripcion;
+        protected global::System.Web.UI.WebControls.Label lblDescripcion1;
+        
+        /// <summary>
+        /// Control txtDescripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        
+        /// <summary>
+        /// Control txtConsecutivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConsecutivo;
         
         /// <summary>
         /// Control lblPoseePrefijo.
@@ -40,6 +58,15 @@ namespace BCientificas {
         protected global::System.Web.UI.WebControls.CheckBox chkPoseePrefijo;
         
         /// <summary>
+        /// Control txtPrefijo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrefijo;
+        
+        /// <summary>
         /// Control chkPoseeRango.
         /// </summary>
         /// <remarks>
@@ -47,6 +74,24 @@ namespace BCientificas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkPoseeRango;
+        
+        /// <summary>
+        /// Control txtRangoIni.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRangoIni;
+        
+        /// <summary>
+        /// Control txtRangoFin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRangoFin;
         
         /// <summary>
         /// Control btnAceptar.

@@ -27,16 +27,15 @@
 <fieldset>
 <h3 class="auto-style7">Consecutive Information</h3>
 <div class="auto-style3">
-    <asp:Label ID="lblDescripcion" runat="server" class="col-md-4 control-label"  Text="Description"></asp:Label>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<label class="col-md-4 control-label" for="lblConsecutivo0"><input id="lblDescripcion" name="lblDescripcion" type="text" placeholder="" class="form-control input-md"></label>
-  <div class="col-md-4">
+    <asp:Label ID="lblDescripcion1" runat="server" class="col-md-4 control-label"  Text="Description"></asp:Label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+&nbsp;<div class="col-md-4">
   </div>
 </div>
 <div class="auto-style4">
-    <label class="col-md-4 control-label" for="lblConsecutivo">
     Consecutive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input id="lblConsecutivo" name="lblConsecutivo" type="text" placeholder="" class="form-control input-md"><br />
-    </label>
+    <asp:TextBox ID="txtConsecutivo" runat="server"></asp:TextBox>
+    <br />
 &nbsp;<div class="col-md-2">
 &nbsp;</div>
 </div>
@@ -47,31 +46,35 @@
   <div class="col-md-1">
     
   </div>
+        
 </div>
 
 <!-- Text input-->
 <div class="auto-style6">
-  <label class="col-md-4 control-label" for="lblPrefijo">Prefix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="lblPrefijo" name="lblPrefijo" type="text" placeholder=""></label>  
-  <div class="col-md-2">
+    Prefix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label class="col-md-4 control-label" for="lblConsecutivo0">
+    <asp:TextBox ID="txtPrefijo" runat="server"></asp:TextBox>
+    </label>
+  &nbsp;<div class="col-md-2">
   &nbsp;</div>
 </div>
 
 <!-- Appended checkbox -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="lblPoseeRango">Does it have a range?</label><span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;     
+    Does it have a range?<span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;     
           <asp:CheckBox ID="chkPoseeRango" runat="server" Text=" " OnCheckedChanged="chkPoseePrefijo_CheckedChanged" />
     <br />
       </span>
     &nbsp;<div class="col-md-1">
     <div class="auto-style2">
-        Initial Range&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input id="lblPoseeRango" name="lblPoseeRango" class="form-control" type="text" placeholder="">
+        Initial Range&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	        <span class="input-group-addon">     
-          &nbsp;<br />
+          &nbsp;<asp:TextBox ID="txtRangoIni" runat="server"></asp:TextBox>
+        <br />
         <br />
         Final Range&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input id="lblPoseeRango0" name="lblPoseeRango0" class="form-control" type="text" placeholder=""><br />
+        <asp:TextBox ID="txtRangoFin" runat="server"></asp:TextBox>
+        <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" class="w3-button w3-green" Text="Accept" Width="94px" />
@@ -86,6 +89,7 @@
         </span></div>
     
   </div>
+     </div>
 
 </fieldset>
 

@@ -11,7 +11,7 @@
             <br />
             <br />
         
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateEditButton="True" Height="192px"  Width="528px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateEditButton="True" Height="192px"  Width="528px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             </asp:GridView>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnNuevo" runat="server" Text="New" Width="85px" class="w3-button w3-green"  />
