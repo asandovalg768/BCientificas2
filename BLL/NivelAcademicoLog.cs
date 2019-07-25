@@ -138,7 +138,7 @@ namespace BLL
                     nivel.Cod_Nivel_Academico = ds.Tables[0].Rows[0][0].ToString();
                     nivel.Tipo = ds.Tables[0].Rows[0][1].ToString();
                     nivel.Nombre = ds.Tables[0].Rows[0][2].ToString();
-                    //nivel.Completo = ds.Tables[0].Rows[0][3].ToString();
+                    nivel.Completado = ds.Tables[0].Rows[0][3].ToString();
                     nivel.Detalle = ds.Tables[0].Rows[0][4].ToString();
                     return nivel;
                 }
@@ -161,7 +161,6 @@ namespace BLL
                 ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
                 if (numeroError != 0)
                 {
-                    //insertar en la table de errores
                     HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
                     return null;
                 }

@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitacoraExperimentalLog.cs" />
-    <Compile Include="BitadocasLog.cs" />
+    <Compile Include="BitacorasLog.cs" />
     <Compile Include="ConsecutivosLog.cs" />
     <Compile Include="DescargasLog.cs" />
     <Compile Include="ErroresLog.cs" />
