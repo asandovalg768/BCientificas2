@@ -28,8 +28,7 @@
 <h3 class="auto-style7">Consecutive Information</h3>
 <div class="auto-style3">
     <asp:Label ID="lblDescripcion" runat="server" class="col-md-4 control-label"  Text="Description"></asp:Label>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <asp:DropDownList ID="ddlDescripcion" runat="server" OnSelectedIndexChanged="ddlDescripcion_SelectedIndexChanged" Width="124px"></asp:DropDownList>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<label class="col-md-4 control-label" for="lblConsecutivo0"><input id="lblDescripcion" name="lblDescripcion" type="text" placeholder="" class="form-control input-md"></label>
   <div class="col-md-4">
   </div>
 </div>
@@ -44,7 +43,7 @@
     <div class="auto-style5">
    <asp:Label ID="lblPoseePrefijo" runat="server" Text="Does it have a prefix?"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:CheckBox ID="chkPoseePrefijo" runat="server" Text=" " />
+        <asp:CheckBox ID="chkPoseePrefijo" runat="server" Text=" " OnCheckedChanged="chkPoseePrefijo_CheckedChanged" />
   <div class="col-md-1">
     
   </div>
@@ -53,7 +52,7 @@
 <!-- Text input-->
 <div class="auto-style6">
   <label class="col-md-4 control-label" for="lblPrefijo">Prefix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="lblPrefijo" name="lblPrefijo" type="text" placeholder="" class="form-control input-md"></label>  
+  <input id="lblPrefijo" name="lblPrefijo" type="text" placeholder=""></label>  
   <div class="col-md-2">
   &nbsp;</div>
 </div>
@@ -61,7 +60,8 @@
 <!-- Appended checkbox -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="lblPoseeRango">Does it have a range?</label><span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;     
-          <input type="checkbox"><br />
+          <asp:CheckBox ID="chkPoseeRango" runat="server" Text=" " OnCheckedChanged="chkPoseePrefijo_CheckedChanged" />
+    <br />
       </span>
     &nbsp;<div class="col-md-1">
     <div class="auto-style2">
@@ -74,11 +74,15 @@
       <input id="lblPoseeRango0" name="lblPoseeRango0" class="form-control" type="text" placeholder=""><br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Accept" Width="94px" />
+        <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" class="w3-button w3-green" Text="Accept" Width="94px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Delete" Width="89px" />
+        <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" class="w3-button w3-green" Text="Delete" Width="89px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" OnClick="Button1_Click" class="w3-button w3-green" Text="Close" Width="94px" />
+        <asp:Button ID="btnCerrar" runat="server" OnClick="btnCerrar_Click" class="w3-button w3-green" Text="Close" Width="94px" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </span></div>
     
   </div>

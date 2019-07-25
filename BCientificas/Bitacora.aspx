@@ -11,7 +11,7 @@
      <div ="divInfo" class="auto-style2">
             <br />
         
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateEditButton="True" Height="192px"  Width="528px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateEditButton="True" Height="192px"  Width="528px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             </asp:GridView>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
