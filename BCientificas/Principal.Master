@@ -41,7 +41,7 @@
     
     </td>
         <td class="auto-style1">
-            User:<asp:LoginName ID="LoginName1" runat="server" />
+            User: <!--<asp:LoginName ID="LoginName1" runat="server" />--><asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
             <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx"
                 LogoutText="Close Sesion" OnLoggingOut="LoginStatus1_LoggingOut" />
         </td>

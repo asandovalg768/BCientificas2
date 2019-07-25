@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DAL
 {
     public struct ParamStruct
@@ -37,7 +38,7 @@ namespace DAL
                 cnn = new SqlConnection(cadena_conexion);
                 mensaje_error = String.Empty;
                 numero_error = 0;
-                return cnn;
+                return cnn;                
             }
             catch (NullReferenceException ex)
             {

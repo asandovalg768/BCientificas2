@@ -10,19 +10,22 @@ namespace BCientificas
 {
     public partial class LogIn : System.Web.UI.Page
     {
+        UsuariosLog log = new UsuariosLog();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            txtPass.Attributes["type"] = "password";
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //UsuariosLog log = new UsuariosLog();
-            //if (log.Login(txtUserName.Text, txtPass.Text))
-            //{
-
-            //    Response.Redirect("Default.aspx");
-            //}
+            if (log.Login(txtUserName.Text, txtPass.Text))
+            {
+                log.Login(txtUserName.Text, txtPass.Text);
+                Response.Redirect("Default.aspx");
+            }else if(txtUserName.Text== null && txtPass.Text == null)
+            {
+                lblMensaje.Text = "Insert credentials";
+            }
         }
     }
 }

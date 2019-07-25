@@ -225,6 +225,39 @@ namespace BLL
             }
         }
 
+        public DataSet CargarUsuarios()
+        {
+            cnn = DAL.DAL.trae_conexion("ServiciosWeb", ref error, ref numeroError);
+            if (cnn == null)
+            {
+                //insertar en la table de errores
+                HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                return null;
+            }
+            else
+            {
+                sql = "usp_Usuarios_Load";
+                ParamStruct[] parametros = new ParamStruct[1];
+                DAL.DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Password", SqlDbType.VarChar, "password");
+                ds = DAL.DAL.ejecuta_dataset(cnn, sql, true, parametros, ref error, ref numeroError);
+                if (numeroError != 0)
+                {
+                    //insertar en la table de errores
+                    HttpContext.Current.Response.Redirect("Error.aspx?error=" + numeroError.ToString() + "&men=" + error);
+                    return null;
+                }
+                else
+                {
+                    ds.Tables[0].Columns[0].ColumnName = "Cod_Usuario";
+                    ds.Tables[0].Columns[1].ColumnName = "Nombre";
+                    ds.Tables[0].Columns[2].ColumnName = "Primer_Apellido";
+                    ds.Tables[0].Columns[3].ColumnName = "Segundo_Apellido";
+                    ds.Tables[0].Columns[5].ColumnName = "Username";
+
+                    return ds;
+                }
+            }
+        }
 
         #endregion
 
