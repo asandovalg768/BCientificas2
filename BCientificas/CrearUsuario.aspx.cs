@@ -14,26 +14,52 @@ namespace BCientificas
         UsuariosLog usuariosLog = new UsuariosLog();
         PuestosLog puestoLog = new PuestosLog();
         NivelAcademicoLog nivelAcademicoLog = new NivelAcademicoLog();
-
+        ConsecutivosLog consecutivosLog = new ConsecutivosLog();
+        ConsecutivosLog consecutivos = new ConsecutivosLog();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                
                 CargarNiveles();
                 CargarPuestos();
-                CargarUsuarios();
-                imgFirma.Visible = false;
-                imgFoto.Visible = false;
-                txtContra.ReadOnly = true;
-                txtConfContra.ReadOnly = true;
                
             }
 
+            //txtCodigo.Text = GenerarID();
+            if (txtCodigo.Text == "")
+            {
+
+                Response.Redirect("Default.aspx");
+
+            }
 
 
+            //private string GenerarID()
+            //{
+            //    consecutivo = consecutivoLogica.BuscarConsecutivo(9);
+            //    int codigo = Convert.ToInt32(consecutivo.Consecutivo) + 1;
+            //    int inicio = Convert.ToInt32(consecutivo.Inicio);
+            //    int fin = Convert.ToInt32(consecutivo.Fin);
+            //    if (codigo > inicio && codigo <= fin)
+            //    {
+            //        if (Convert.ToBoolean(consecutivo.PoseePrefijo))
+            //        {
+            //            consecutivo.Consecutivo = codigo.ToString();
+            //            return consecutivo.Prefijo + "-" + codigo.ToString();
+            //        }
+            //        else
+            //        {
+            //            consecutivo.Consecutivo = codigo.ToString();
+            //            return "USU-" + codigo.ToString();
+            //        }
 
+            //    }
+            //    else
+            //    {
+            //        return null;
+            //    }
+            //}
         }
 
         protected void chkCambioContra_CheckedChanged(object sender, EventArgs e)
@@ -50,14 +76,7 @@ namespace BCientificas
             }
         }
 
-        private void CargarUsuarios() {
-
-            GVUsuarios.DataSource = usuariosLog.CargaUsuarios();
-            GVUsuarios.DataBind();
-
-            btnGuardar.Visible = false;
-            
-        }
+        
         private void CargarNiveles() {
             DataSet ds = new DataSet();
             ds = nivelAcademicoLog.CargaNivelAcademico();
@@ -125,35 +144,38 @@ namespace BCientificas
 
         protected void GVUsuarios_RowCommand(object sender, EventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow row = GVUsuarios.Rows[index];
-            string id = row.Cells[1].Text;
+            //int index = Convert.ToInt32(e.CommandArgument);
+            //GridViewRow row = GVUsuarios.Rows[index];
+            //string id = row.Cells[1].Text;
 
-            UsuariosLog usuario = new UsuariosLog();
-            usuario = usuariosLog.BuscaUsuario(id);
+            //UsuariosLog usuario = new UsuariosLog();
+            //usuario = usuariosLog.BuscaUsuario(id);
 
 
 
-            txtCodigo.Text = usuario.Cod_Usuario;
-            txtNombre.Text = usuario.Nombre;
-            txt1Apellido.Text = usuario.Primer_Apellido;
-            txt2Apellido.Text = usuario.Segundo_Apellido;
-            txtTipoRol.Text = usuario.Rol;
-            txtTel0.Text = usuario.Telefono;
-            ddlPuesto.Text = usuario.Cod_Puesto;
-            txtNickName.Text = usuario.Username;
-            ddlCargaNivelAca.Text = usuario.Cod_Nivel_Academico;
-            txtContra.Text = usuario.Pass;
-            txtConfContra.Text = usuario.Pass;
-            imgFirma.Visible = true;
-            imgFoto.Visible = true;
-            imgFirma.ImageUrl = usuario.Img_Firma;
-            imgFoto.ImageUrl = usuario.Img_Foto;
+            //txtCodigo.Text = usuario.Cod_Usuario;
+            //txtNombre.Text = usuario.Nombre;
+            //txt1Apellido.Text = usuario.Primer_Apellido;
+            //txt2Apellido.Text = usuario.Segundo_Apellido;
+            //txtTipoRol.Text = usuario.Rol;
+            //txtTel0.Text = usuario.Telefono;
+            //ddlPuesto.Text = usuario.Cod_Puesto;
+            //txtNickName.Text = usuario.Username;
+            //ddlCargaNivelAca.Text = usuario.Cod_Nivel_Academico;
+            //txtContra.Text = usuario.Pass;
+            //txtConfContra.Text = usuario.Pass;
+            //imgFirma.Visible = true;
+            //imgFoto.Visible = true;
+            //imgFirma.ImageUrl = usuario.Img_Firma;
+            //imgFoto.ImageUrl = usuario.Img_Foto;
 
         
 
         }
 
-       
+        protected void chkCambioContra_CheckedChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

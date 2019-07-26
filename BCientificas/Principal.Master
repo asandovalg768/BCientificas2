@@ -12,6 +12,10 @@
         .auto-style1 {
             height: 24px;
         }
+        .auto-style2 {
+            height: 24px;
+            width: 327px;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +30,7 @@
     </table>
             <table id="navegacion"  border="0" style="height: 26px">
     <tr>
-    <td class="auto-style1">
+    <td class="auto-style2">
         You are here:
 
         
@@ -41,9 +45,8 @@
     
     </td>
         <td class="auto-style1">
-            User: <!--<asp:LoginName ID="LoginName1" runat="server" />--><asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx"
-                LogoutText="Close Sesion" OnLoggingOut="LoginStatus1_LoggingOut" />
+            User: <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LogIn.aspx">Close Sesion</asp:HyperLink>
         </td>
     </tr>
     </table>

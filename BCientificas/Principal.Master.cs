@@ -9,13 +9,14 @@ namespace BCientificas
 {
     public partial class Principal : System.Web.UI.MasterPage
     {
-        public static string usuario;
+
+      
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (usuario != null)
-            {
-                lblUsuario.Text = usuario;
-            }
+            
+             
+         
 
         }
     
