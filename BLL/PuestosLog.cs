@@ -18,11 +18,10 @@ namespace BLL
         {
         }
 
-        public PuestosLog(string cod_Puesto, string nombre, string rolLaboratorio_id)
+        public PuestosLog(string cod_Puesto, string nombre)
         {
             Cod_Puesto = cod_Puesto;
             Nombre = nombre;
-            RolLaboratorio_id = rolLaboratorio_id;
         }
 
 
@@ -32,7 +31,7 @@ namespace BLL
         #region Propiedades
         public string Cod_Puesto { get; set; }
         public string Nombre { get; set; }
-        public string RolLaboratorio_id { get; set; }
+
 
         #endregion
 

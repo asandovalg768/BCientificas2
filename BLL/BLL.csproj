@@ -55,7 +55,6 @@
     <Compile Include="ProyectosLog.cs" />
     <Compile Include="PuestosLog.cs" />
     <Compile Include="RamasCientificasLog.cs" />
-    <Compile Include="RolLaboratorioLog.cs" />
     <Compile Include="TipoConsecutivoLog.cs" />
     <Compile Include="UsuariosLog.cs" />
   </ItemGroup>
