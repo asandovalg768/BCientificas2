@@ -125,8 +125,8 @@ namespace BCientificas
 
         protected void GVUsuarios_RowCommand(object sender, EventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow row = GVUsuarios.Rows[index];
+            //int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = GVUsuarios.Rows[0];
             string id = row.Cells[1].Text;
 
             UsuariosLog usuario = new UsuariosLog();
